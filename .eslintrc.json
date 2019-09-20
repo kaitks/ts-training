@@ -1,0 +1,32 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": ["airbnb-typescript/base"],
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "@typescript-eslint/indent": ["error", 4],
+        "@typescript-eslint/no-unused-vars": ["error", {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": false,
+            "argsIgnorePattern": "next"
+
+        }],
+        "max-len": "off",
+        "no-shadow": "off"
+    },
+    "globals": {
+        "$": "readonly",
+        "document": "readonly"
+    }
+}
