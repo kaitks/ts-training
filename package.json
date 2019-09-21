@@ -6,10 +6,9 @@
     "scripts": {
         "start": "nodemon",
         "test": "jest",
-        "eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx ./",
+        "eslint": "eslint --ext .js,.jsx,.ts,.tsx ./",
         "watch": "webpack -w --info-verbosity verbose --mode development",
-        "build": "webpack --info-verbosity verbose --mode production",
-        "tsc": "tsc"
+        "build": "webpack --info-verbosity verbose --mode production"
     },
     "author": "",
     "license": "ISC",
