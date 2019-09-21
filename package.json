@@ -6,9 +6,10 @@
     "scripts": {
         "start": "nodemon",
         "test": "jest",
-        "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+        "eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx ./",
         "watch": "webpack -w --info-verbosity verbose --mode development",
-        "build": "webpack --info-verbosity verbose --mode production"
+        "build": "webpack --info-verbosity verbose --mode production",
+        "tsc": "tsc"
     },
     "author": "",
     "license": "ISC",
@@ -22,6 +23,7 @@
         "@typescript-eslint/parser": "^2.2.0",
         "eslint": "^6.4.0",
         "eslint-config-airbnb-typescript": "^4.0.1",
+        "eslint-config-esnext": "^4.0.0",
         "eslint-plugin-import": "^2.18.2",
         "jest": "^24.9.0",
         "nodemon": "^1.19.2",

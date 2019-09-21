@@ -25,6 +25,15 @@
             ]
         },
         {
+            "label": "tsc",
+            "type": "npm",
+            "script": "tsc",
+            "group": "build",
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
             "label": "start",
             "type": "npm",
             "script": "start",
