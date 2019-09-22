@@ -29,7 +29,7 @@
             "name": "Current File",
             "program": "${file}",
             "console": "integratedTerminal",
-            "outFiles": ["${workspaceFolder}/built/**/*.js"]
+            "outFiles": ["${workspaceFolder}/built/**/*.js"],
         }
     ]
 }
