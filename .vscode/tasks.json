@@ -10,7 +10,10 @@
             "group": "build",
             "problemMatcher": [
                 "$ts-webpack-watch"
-            ]
+            ],
+            "presentation": {
+                "clear": true
+            }
         },
         {
             "label": "watch",
@@ -22,22 +25,19 @@
             },
             "problemMatcher": [
                 "$ts-webpack-watch"
-            ]
-        },
-        {
-            "label": "tsc",
-            "type": "npm",
-            "script": "tsc",
-            "group": "build",
-            "problemMatcher": [
-                "$tsc"
-            ]
+            ],
+            "presentation": {
+                "clear": true
+            }
         },
         {
             "label": "start",
             "type": "npm",
             "script": "start",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true
+            }
         },
         {
             "label": "test",
@@ -50,7 +50,6 @@
             "presentation": {
                 "clear": true
             }
-
         },
         {
             "label": "eslint",
