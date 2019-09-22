@@ -4,27 +4,30 @@
         "node": true,
         "jest": true
     },
-    "extends": ["airbnb-typescript/base", "esnext"],
-    "plugins": [
-        "@typescript-eslint"
+    "extends": [
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "airbnb-typescript/base",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
     ],
+    "plugins": ["@typescript-eslint"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "rules": {
-        "@typescript-eslint/indent": ["error", 4],
-        "@typescript-eslint/no-unused-vars": ["error", {
-            "vars": "all",
-            "args": "after-used",
-            "ignoreRestSiblings": false,
-            "argsIgnorePattern": "next"
-
-        }],
-        "@typescript-eslint/semi": ["error"],
-        "import/no-nodejs-modules": "off",
-        "max-len": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false,
+                "argsIgnorePattern": "next"
+            }
+        ],
         "no-shadow": "off"
     },
     "globals": {

@@ -1,4 +1,1 @@
-export default function repeatedString(s, n) {
-
-
-}
+export default function repeatedString(s, n) {}
