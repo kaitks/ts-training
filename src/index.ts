@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
 import sockMerchant from './sock-merchant';
+import jumpingOnTheClouds from './jumping-on-the-clouds';
 
-export { sockMerchant };
+export { sockMerchant, jumpingOnTheClouds };

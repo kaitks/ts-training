@@ -1,10 +1,11 @@
 type Sock = number;
+type Color = number;
 
 const countPair = (socks: Sock[]) => Math.floor(socks.length / 2);
 
-export default function sockMerchant(n: number, ar: number[]) {
+export default function sockMerchant(n: number, ar: Sock[]) {
     if (n !== ar.length) throw new Error('number of socks does not match!');
-    const sockPair: Dictionary<number, Sock[]> = {};
+    const sockPair: Dictionary<Color, Sock[]> = {};
     ar.forEach(sock => {
         const socksWithSameColor = sockPair[sock] || <Sock[]>[];
         sockPair[sock] = [...socksWithSameColor, sock];
@@ -14,5 +15,3 @@ export default function sockMerchant(n: number, ar: number[]) {
         .reduce((a, b) => a + b, 0);
     return numberOfPair;
 }
-
-sockMerchant(1, [1]);
