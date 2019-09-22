@@ -1,4 +1,4 @@
 import sockMerchant from './sock-merchant';
-import jumpingOnTheClouds from './jumping-on-the-clouds';
+import jumpingOnClouds from './jumping-on-clouds';
 
-export { sockMerchant, jumpingOnTheClouds };
+export { sockMerchant, jumpingOnClouds };
