@@ -28,7 +28,8 @@
                 "argsIgnorePattern": "next"
             }
         ],
-        "no-shadow": "off"
+        "no-shadow": "off",
+        "no-plusplus": "off"
     },
     "globals": {
         "$": "readonly",
