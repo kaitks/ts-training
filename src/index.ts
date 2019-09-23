@@ -1,4 +1,4 @@
-import sockMerchant from './sock-merchant';
-import jumpingOnClouds from './jumping-on-clouds';
+import sockMerchant from "./interview-preparation-kit/warmup/sock-merchant";
+import jumpingOnClouds from "./interview-preparation-kit/warmup/jumping-on-clouds";
 
 export { sockMerchant, jumpingOnClouds };
