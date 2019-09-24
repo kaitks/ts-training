@@ -18,8 +18,7 @@ export default function minimumBribes(q: number[]) {
         steps.push(step);
         qs = newQs;
     }
-    if (steps.some(largerThanTwo)) {
-        console.log("Too chaotic");
-    }
-    return steps.reduce((a, b) => a + b, 0);
+    if (steps.some(largerThanTwo)) console.log("Too chaotic");
+    else console.log(steps.reduce((a, b) => a + b, 0));
+    return null;
 }
