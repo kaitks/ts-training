@@ -19,13 +19,24 @@
             "label": "watch",
             "type": "npm",
             "script": "watch",
+            "group": "build",
+            "problemMatcher": [
+                "$ts-webpack-watch"
+            ],
+            "presentation": {
+                "clear": true
+            }
+        },
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$ts-webpack-watch"
-            ],
             "presentation": {
                 "clear": true
             }

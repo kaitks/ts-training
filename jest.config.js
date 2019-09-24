@@ -96,7 +96,7 @@ module.exports = {
     // notifyMode: "failure-change",
 
     // A preset that is used as a base for Jest's configuration
-    // preset: null,
+    preset: "ts-jest",
 
     // Run tests from one or more projects
     // projects: null,
@@ -128,7 +128,7 @@ module.exports = {
     // runner: "jest-runner",
 
     // The paths to modules that run some code to configure or set up the testing environment before each test
-    // setupFiles: [],
+    setupFiles: ["core-js"],
 
     // A list of paths to modules that run some code to configure or set up the testing framework before each test
     // setupFilesAfterEnv: [],
@@ -152,9 +152,7 @@ module.exports = {
     // ],
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-    // testPathIgnorePatterns: [
-    //   "/node_modules/"
-    // ],
+    testPathIgnorePatterns: ["/node_modules/", "/built/"],
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
     // testRegex: [],
@@ -172,9 +170,7 @@ module.exports = {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    transform: {
-        "^.+\\.tsx?$": "ts-jest",
-    },
+    // transform: {},
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [

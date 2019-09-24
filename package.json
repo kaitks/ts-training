@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon",
         "test": "jest",
-        "eslint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+        "eslint": "eslint",
         "watch": "webpack -w --info-verbosity verbose --mode development",
         "build": "webpack --info-verbosity verbose --mode production"
     },
@@ -14,7 +14,8 @@
     "license": "ISC",
     "dependencies": {
         "@types/ramda": "^0.26.22",
-        "ramda": "^0.26.1"
+        "ramda": "^0.26.1",
+        "core-js": "^3.2.1"
     },
     "devDependencies": {
         "@types/jest": "^24.0.18",
