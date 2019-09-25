@@ -6,7 +6,7 @@ function arrayGen(n: number) {
 export default function minimumSwaps(arr: number[]) {
     let swap = 0;
     let indexList = arrayGen(arr.length);
-    while (indexList.length > 0) {
+    while (indexList.length > 1) {
         const index = indexList.shift() as number;
         const expectedValue = index + 1;
         let indexValue = arr[index];
