@@ -1,31 +1,16 @@
-/* eslint-disable no-param-reassign */
-
-function arrayMove<T>(arr: T[], fromIndex: number, toIndex: number) {
-    const element = arr[fromIndex];
-    arr.splice(fromIndex, 1);
-    arr.splice(toIndex, 0, element);
-    return arr;
-}
-
-const findMovedPeople = (person: number, qs: number[], qe: number[]) => {
-    const startPos = qs.indexOf(person);
-    const endPos = qe.indexOf(person);
-    const bribeCount = startPos - endPos;
-    arrayMove(qs, startPos, endPos);
-    return bribeCount;
-};
-
 export default function minimumBribes(q: number[]) {
-    const bribeCountList: number[] = [];
-    const qs = Array.from(Array(q.length), (e, i) => i + 1);
-    for (let i = 0; i < q.length; i++) {
-        const bribeCount = findMovedPeople(q[i], qs, q);
-        if (bribeCount > 2) {
+    let bribeCount: number = 0;
+    for (let i = q.length - 1; i >= 0; i--) {
+        const person = q[i];
+        const personOriginalIndex = person - 1;
+        if (personOriginalIndex - i > 2) {
             console.log("Too chaotic");
             return null;
         }
-        bribeCountList.push(bribeCount);
+        for (let j = Math.max(0, personOriginalIndex - 1); j < i; j++) {
+            if (q[j] > person) bribeCount++;
+        }
     }
-    console.log(bribeCountList.reduce((a, b) => a + b, 0));
+    console.log(bribeCount);
     return null;
 }
