@@ -5,8 +5,8 @@
     "main": "dist/bundle.js",
     "scripts": {
         "start": "nodemon",
-        "test": "jest",
-        "eslint": "eslint",
+        "test": "jest --silent",
+        "eslint": "eslint --quiet",
         "watch": "webpack -w --info-verbosity verbose --mode development",
         "build": "webpack --info-verbosity verbose --mode production"
     },
