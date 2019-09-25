@@ -1,24 +1,31 @@
-const calculateStep = (person: number, qs: number[], qe: number[]) => {
+/* eslint-disable no-param-reassign */
+
+function arrayMove<T>(arr: T[], fromIndex: number, toIndex: number) {
+    const element = arr[fromIndex];
+    arr.splice(fromIndex, 1);
+    arr.splice(toIndex, 0, element);
+    return arr;
+}
+
+const findMovedPeople = (person: number, qs: number[], qe: number[]) => {
     const startPos = qs.indexOf(person);
     const endPos = qe.indexOf(person);
-    const newQs = [...qs];
-    newQs.splice(startPos, 0);
-    newQs.splice(endPos, 0, person);
-    const result: [number, number[]] = [startPos - endPos, newQs];
-    return result;
+    const bribeCount = startPos - endPos;
+    arrayMove(qs, startPos, endPos);
+    return bribeCount;
 };
 
-const largerThanTwo = (n: number) => n > 2;
-
 export default function minimumBribes(q: number[]) {
-    const steps: number[] = [];
-    let qs = Array.from(Array(q.length), (e, i) => i + 1);
-    for (let i = q.length; i >= 1; i--) {
-        const [step, newQs] = calculateStep(i, qs, q);
-        steps.push(step);
-        qs = newQs;
+    const bribeCountList: number[] = [];
+    const qs = Array.from(Array(q.length), (e, i) => i + 1);
+    for (let i = 0; i < q.length; i++) {
+        const bribeCount = findMovedPeople(q[i], qs, q);
+        if (bribeCount > 2) {
+            console.log("Too chaotic");
+            return null;
+        }
+        bribeCountList.push(bribeCount);
     }
-    if (steps.some(largerThanTwo)) console.log("Too chaotic");
-    else console.log(steps.reduce((a, b) => a + b, 0));
+    console.log(bribeCountList.reduce((a, b) => a + b, 0));
     return null;
 }
