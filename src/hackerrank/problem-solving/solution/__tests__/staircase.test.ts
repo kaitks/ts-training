@@ -1,3 +1,5 @@
 import staircase from "../staircase";
 
-staircase(6);
+test("", () => {
+    staircase(6);
+});
