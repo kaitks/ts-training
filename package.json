@@ -13,9 +13,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/faker": "^4.1.6",
         "@types/ramda": "^0.26.22",
-        "ramda": "^0.26.1",
-        "core-js": "^3.2.1"
+        "core-js": "^3.2.1",
+        "faker": "^4.1.0",
+        "ramda": "^0.26.1"
     },
     "devDependencies": {
         "@types/jest": "^24.0.18",
