@@ -1,3 +1,3 @@
 # ts-training
 
-Training space using Typescript
+Code exercise solved in Nodejs & Typescript
