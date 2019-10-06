@@ -1,3 +1,7 @@
+// Quick-sort with pivot picked as the middle of the array (dynamic pivot)
+// Most Javascript implement for quick-sort online is wrong with dupliacate value in array
+// This is the implementation with these cases passed
+
 import arraySwap from "../lib/array-swap";
 
 export default function quickSort(arr: number[], start: number, end: number) {

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import faker from "faker";
 import quickSort from "../quick-sort-first";
 
