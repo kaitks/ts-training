@@ -17,6 +17,8 @@
         "@types/ramda": "^0.26.22",
         "core-js": "^3.2.1",
         "faker": "^4.1.0",
+        "fp-ts": "^2.1.0",
+        "io-ts": "^2.0.1",
         "ramda": "^0.26.1"
     },
     "devDependencies": {
