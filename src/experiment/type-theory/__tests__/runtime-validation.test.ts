@@ -1,4 +1,4 @@
-import getProducts from "../io-ts";
+import getProducts from "../runtime-validation";
 
 test("", () => {
     const result = getProducts();

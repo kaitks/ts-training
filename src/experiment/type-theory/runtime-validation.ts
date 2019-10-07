@@ -11,7 +11,6 @@ const Product = t.interface({
 const Products = t.array(Product);
 
 export default function getProducts() {
-    // A mock REST API response
     const apiResponse = [
         {
             id: 1,
@@ -20,16 +19,13 @@ export default function getProducts() {
             quantity: 5,
         },
         {
-            id: "2",
+            id: 2,
             name: "The Lord of the Rings",
             type: "BOOK",
             quantity: 10,
         },
     ];
-    // Decode i.e. validate the api response
     const result = Products.decode(apiResponse);
-    // Use a reporter to throw an error if validation fails
     if (isLeft(result)) throw new Error(PathReporter.report(result).join("\n"));
-    // Get the validated value and use it in your application
     return result.right;
 }
